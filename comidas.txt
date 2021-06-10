@@ -1,0 +1,10 @@
+1 Pure de batata
+2 Pizza
+3 Pao de queijo
+4 Pastel
+5 Lasanha
+6 Churrasco
+7 Cachorro quente
+8 Bolo de cenoura
+9 Mandioca frita
+10 Polenta
