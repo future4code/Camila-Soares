@@ -1,0 +1,194 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+   
+   
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 50px;
+    
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+div img {
+    background-color: white;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    /* margin-right: 90px ; */
+    position: relative;
+    margin-top: 100px;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+}
+
+.icone {
+    height: 15px;
+    width: 20px;
+
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+}
+
+#container-para-comprar {
+    padding-top: 90px;
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+   
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 960px;
+    padding-right: 200px;
+    padding-left: -90px;
+    text-align: center;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px; 
+    border-color: white;
+    color: black;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;   
+   
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+    margin-left: 710px;
+    margin-top: 140px;
+}
+
+#back-button:hover {
+    background-color: #635a3d;
+}
+
+
+
+/* TESTES */
+.posicionamento-texto{
+padding: 10px;
+margin-top: -70px;
+padding-left: 630px;
+width: 290px;
+
+}
+
+.posicionamento-texto2{
+    padding-top: 30px;
+    
+}
+
+.centralizar-tabela{
+    margin-left: 140px;
+    padding-left: 290px;
+}
+
+
+.posicionamento-texto-home{
+    width:200px;
+    height: 140px;
+    padding-right: 90px;
+    padding-top: 90px;
+    padding-left: 660px;
+padding-bottom: 10px;
+text-align: center;
+}
+
+p2{
+    font-size: 20px;
+    padding-right: 30px;
+    font-family: Roboto;
+    
+}
+
+h2,p{
+    font-family: Roboto;
+}
+
+.p4{
+    font-family: Roboto;
+}
