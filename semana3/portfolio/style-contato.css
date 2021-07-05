@@ -30,6 +30,7 @@ footer{
     background-color: #f6466c;
     width: 100%;
     height: 90px;
+    margin-top: 350px;
 }
 
 /* MENU */
@@ -107,29 +108,17 @@ h1 {
 
 /* LINKS */ 
 
-	
- /* link que ainda não foi acessado */
- a {
-    color: #000;
-    text-decoration: none;
- }
- /* link que foi visitado */
- a:visited {
-     color: #f6466c;
-     text-decoration: none;
- }
- /* quando o ponteiro do mouse passa no link */
- a:hover {
-     color: #FFC0CB;
-     text-decoration: none;
- }
- /* quando o link for selecionado */
- a:active {
-     color: black;
-     text-decoration: none;
- }
+a:link, a:visited {
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: none;
+	color: #f6466c
+	}
+a:active {
+	text-decoration: none;
+	}
 
-    
 /*BOTÃO */
 
 .botao-voltar{
@@ -138,10 +127,9 @@ h1 {
 
 .frase-footer{
     color: black;
-    margin-top: -50px;
-    margin-left: -690px;
-    font-family:sans-serif;
-    
+    margin-top: -20px;
+    margin-left: -190px;
+    font-family:sans-serif
 }
 
 .p4{
@@ -169,65 +157,8 @@ h1 {
 
 
 
-/* FORMULÁRIO */
-#area
-{
-  margin-top: 200px;
-  margin-left: 300px;
-  left: 200px;
-  top: 140px;
-  width:320px;
-  height:270px;
-}
-#area #formulario
-{
-  position:absolute;
-  display:block;
-}
-fieldset
-{
-  width:100px;
-  height:250px;
-}
-legend
-{
-  font-style:bold;
-  font-family: sans-serif;
-}
 
-/* TESTE MENU!!! */
-/*** menu bucks por fred ****/
-/* .button {
-    width: 100px;
-    margin: 0px;display: inline-block; margin: 0 -50px 0 0;
-  }
-  .button a {
-      margin-left: 200px;
-      margin-top: -90px;
-    display: block;
-    height: 30px;
-    width: 120px;
-    color: #fff;
-    font:bold 14px/40px helvetica, verdana, sans-serif;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    /*gradient*/  
-    /* background: #f6466c; ; 
-   
-  }
-  .button a {
-      -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
-  
-  }
-  .button p {
-  -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;} */ 
 
-            
 /* TESTE CAIXA */
 .caixadiv {
     background-color: white;
@@ -242,27 +173,84 @@ legend
   h2{
       font-size: 70px;
       font-family: Champagne;
-      margin-left: 150px;
+      margin-left: 130px;
       color: #363636;
-      margin-top: 60px;
   }
   @font-face {
 	font-family: Champagne;
 	src: url('Champagne\ &\ Limousines.ttf')
 }
+/* FORMULARIO */
+#area
+{
+  position:relative;
+  width:20px;
+  height:70px;
+  margin-top: -410px;
+  margin-left: 550px;
+}
+#area #formulario
+{
+  position:absolute;
+  display:block;
+}
 
-.texto-inicio{
-    width: 880px;
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 20px;
+
+fieldset
+{
+  background-color: white;
+  width:500px;
+  height:290px;
+}
+legend
+{
+  font-weight:bold;
+  font-family: "Segoe UI","Arial","Times New Roman";
+}
+#formulario label
+{
+  position:absolute;
+  left:19px;
+  margin-right:5px;
+}
+#formulario input.campo_nome
+{
+  background-color: #FFC0CB;
+  position:absolute;
+  left:95px;
+  top:23px;
+  width:295px;
+}
+#formulario input.campo_email
+{
+  background-color: #FFC0CB;
+  position:absolute;
+  left:95px;
+  margin-top:2px;
+  width:295px;
+}
+#formulario textarea.msg
+{
+  position:absolute;
+  background-color: #FFC0CB;
+  margin-left: 90px;
+  width: 300px;
+}
+
+
+
+
+
+#formulario input.btn_submit
+{
+    width: 50px;
+    height: 24px;
+  position:absolute;
+  bottom: 0.5em;
+  right:10px;
+  background-color:#f6466c;
 }
 
 a{
-    font-family: Champagne;
-}
-
-.posicionamento-foto{
- margin-top: -30px;
- margin-left: 40px;
+  font-family: Champagne;
 }
