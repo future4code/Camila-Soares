@@ -34,13 +34,23 @@ const ConstainerPosicionaTextoEndereco = styled.div `
 margin-left: 60px;
  background-color: white;
  margin-top: 20px;
-`
+
+
+
+
+ img {
+     width: 30px;
+     heigth: 30px;
+     margin-left: 30px;
+ }
+`;
 
 function CardPequeno(props) {
     return (
         <Container>
       <ContainerPequeno>
         <ContainerPosicionaTextoEmail>
+
       <p><b>Email:</b> camila.soares19@hotmail.com</p>
       </ContainerPosicionaTextoEmail>
            </ContainerPequeno>

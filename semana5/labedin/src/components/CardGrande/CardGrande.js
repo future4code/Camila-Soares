@@ -10,22 +10,24 @@ padding: 20px 10px;
 margin-bottom: 10px;
 height: 200px;
 
-`
 
- const DimensionamentoFotos = styled.img `
  
- width: 70px;
- margin-right: 10px;
- border-radius: 50%;
-
- `
  
-
+ img {
+     width: 80px;
+     heigth: 40px;
+     border-radius: 50%;
+ }
+ `;
 
 function CardGrande(props) {
     return (
         <BigCardContainer>
-            <img src={ props.imagem } />
+
+            <img src={ props.imagem } 
+            alt="Imagem" 
+            />
+          
             <div>
                 <h4>{ props.nome }</h4>
                 <p>{ props.descricao }</p>
