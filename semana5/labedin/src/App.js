@@ -6,7 +6,6 @@ import FotoCamila from '../src/foto.jpg';
 import LogoLabenu from '../src/logo-labenu.png';
 import LogoEscola from '../src/logo-escola.jpg';
 import CardPequeno from './components/CardPequeno';
-import LogoEmail from '../src/logo-email.png';
 
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
       </div>
       <CardPequeno 
       
-      imagem={LogoEmail}
           
         />
       <div className="page-section-container">
