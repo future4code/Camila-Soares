@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-// import axios from 'axios';
-import styled from 'styled-components';
+import axios from 'axios';
+import styled, { ThemeProvider } from 'styled-components';
 
 const ContainerInformacoes = styled.div`
 width: 280px;
@@ -10,11 +10,33 @@ margin-left: 500px;
 border: 1px solid black;
 `
 
- class App extends React.Component {
 
+const headers = {
+  headers: {
+  Authorization: "camila-soares-lovelace"
+}
+};
+ class App extends React.Component {
   state = {
     valorNome: '',
     valorEmail: ''
+  }
+
+  componentDidMount() {
+    this.pegarUsuarios();
+  }
+
+  pegarUsuarios = () => {
+  axios
+  .get(url,headers)
+  .then((res) => {
+    this.setState({ valorNome: res 
+
+    })
+     .catch((err) => {
+      alert(err);
+    })
+  })
   }
 
   onChangeNome = (event) => {
@@ -40,6 +62,7 @@ border: 1px solid black;
 />
 <p>E-mail:</p>
 <input name={'email'} onChange={this.setState.onChangeEmail} value={this.setState.valorEmail}/> 
+<br/>
 <button>Salvar</button>
 </ContainerInformacoes>
 </div>
