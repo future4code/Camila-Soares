@@ -1,73 +1,43 @@
-import React from 'react';
-import './App.css';
-import axios from 'axios';
-import styled, { ThemeProvider } from 'styled-components';
+import React from 'react'
+import TelaCadastro from './components/TelaCadastro'
+import TelaListaUsuario from './components/TelaListaUsuarios'
 
-const ContainerInformacoes = styled.div`
-width: 280px;
-height: 280px;
-margin-left: 500px;
-border: 1px solid black;
-`
-
-
-const headers = {
-  headers: {
-  Authorization: "camila-soares-lovelace"
-}
-};
- class App extends React.Component {
+class App extends React.Component {
   state = {
-    valorNome: '',
-    valorEmail: ''
+    telaAtual: "cadastro"
   }
 
-  componentDidMount() {
-    this.pegarUsuarios();
+  escolherTela = () => {
+    switch (this.state.telaAtual) {
+      case "cadastro":
+        return <TelaCadastro irParaTelaLista={this.irParaTelaLista}/>
+        case "lista":
+        return  <TelaListaUsuario  irParaTelaCadastro={this.irParaTelaCadastro}/>
+        default:
+          return <div>Erro! Página não encontrada!!</div>
+    }
   }
 
-  pegarUsuarios = () => {
-  axios
-  .get(url,headers)
-  .then((res) => {
-    this.setState({ valorNome: res 
-
-    })
-     .catch((err) => {
-      alert(err);
-    })
-  })
+  irParaTelaCadastro = () => {
+    this.setState({telaAtual: "cadastro"})
   }
 
-  onChangeNome = (event) => {
-    this.setState({valorNome: event.target.value})
+
+  irParaTelaLista = () => {
+    this.setState({telaAtual: "lista"})
+  }
   
+  render() {
+    return (
+      <div>
+     {this.escolherTela()}
+
+      </div>
+    )
   }
 
- onChangeEmail = (event) => {
-   this.setState({valorEmail: event.target.value})
- }
 
-  render()
-  
-
- { return(
-
-   <div>
-  <button>Ir para página de lista</button>
-
-<ContainerInformacoes>
-<p>Nome:</p>
-<input name={'nome'} onChange={this.onChangeNome} value={this.setState.valorNome}
-/>
-<p>E-mail:</p>
-<input name={'email'} onChange={this.setState.onChangeEmail} value={this.setState.valorEmail}/> 
-<br/>
-<button>Salvar</button>
-</ContainerInformacoes>
-</div>
-  )
-};
 }
+
 
 export default App
