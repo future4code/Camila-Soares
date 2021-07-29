@@ -105,6 +105,7 @@ render() {
       </PositionButton>
       <PositionContainer>
       <Container>
+      
       <h2>Atividade</h2>
       <p><b>Nome:</b> {this.state.activity.activity}</p>
       <p><b>Tipo:</b>{this.state.activity.type}</p> 
