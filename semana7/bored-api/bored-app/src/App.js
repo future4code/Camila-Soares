@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import TelaAtividade1 from './components/TelaAtividade1'
 
 document.body.style = "background: #f1f4fb;";
 
@@ -11,7 +10,6 @@ justify-content: center;
 align-items: center;
 
 button{
-  /* margin-left: 800px; */
   border-radius: 10rem;
   border: none;
   cursor: pointer;
@@ -120,4 +118,3 @@ render() {
   
 }
 }
-
