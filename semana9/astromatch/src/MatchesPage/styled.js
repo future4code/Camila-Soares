@@ -1,0 +1,40 @@
+import React from 'react'
+import styled from 'styled-components'
+
+const ContainerLista = styled.div`
+display: flex; 
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+
+
+ div {
+    background-color: white;
+    box-shadow: 0 3px 2px 2px rgba(160,160,160,0.1);
+    width: 300px;
+    height: 460px;
+    border-radius: 5px;
+} 
+
+h1{
+    color: #EF0A82;
+    font-size: 25px;
+    text-align: center;
+    font-family: monospace;
+}
+`
+
+ const ContainerWhite = () => {
+    return(
+        <ContainerLista>
+            <div>
+            <h1>Astromatch</h1> 
+            Lista de matches!
+            </div> 
+         
+            </ContainerLista>
+    )
+}
+
+export default ContainerWhite
+
