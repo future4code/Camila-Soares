@@ -9,14 +9,17 @@ div{
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 
 button{
+ 
   background-color: #EF0A82;
   color: white;
-  border: 1px solid black;
+  border: 1px solid #D92963;
   margin: 4px;
   cursor: pointer;
+  border-radius: 5px;
 
 :hover{
     background-color: #EE7EB9;

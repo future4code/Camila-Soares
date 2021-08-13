@@ -1,9 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 
 const ContainerLista = styled.div`
+    padding: 50px;
     display: flex; 
     align-items: center;
     justify-content: flex-start;
@@ -13,7 +14,7 @@ const ContainerLista = styled.div`
  div {
     background-color: white;
     box-shadow: 0 3px 2px 2px rgba(160,160,160,0.1);
-    width: 300px;
+    width: 340px;
     height: 460px;
     border-radius: 5px;
 } 
@@ -48,6 +49,7 @@ const ContainerWhite = (props) => {
         <ContainerLista>
             <div>
                 <h1>Astromatch</h1>
+                {showMatchList()}
             Lista de matches!
             </div>
         </ContainerLista>

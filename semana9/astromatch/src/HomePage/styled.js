@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-document.body.style = "background: #E1E8E5;"
+document.body.style = "background: #E1E8E5"
 
 const ContainerPai = styled.div`
+    padding: 50px;
     display: flex; 
     align-items: center;
     flex-direction: column;
@@ -16,8 +17,8 @@ const ContainerPai = styled.div`
 
  div {
     background-color: white;
-    box-shadow: 0 3px 2px 2px rgba(160,160,160,0.1);
-    width: 300px;
+    box-shadow: 0 3px 2px 2px #C2C7C5;
+    width: 340px;
     height: 460px;
     border-radius: 5px;
 } 
@@ -34,10 +35,11 @@ h2{
 }
 
 img{
-    width: 295px;
+    padding: 1px;
+    width: 320px;
     height: 240px;
     border-radius: 3px;
-    margin: 2px;
+    margin: 10px;
     
 
 :hover{
@@ -46,9 +48,10 @@ img{
 }}
 
 button{
-    margin: 10px;
+    margin-top: -20px;
+    margin: 1px;
     background-color: #EF0A82;
-    border: 1px solid black;
+    border: 1px solid #D92963;
     color: white;
     cursor: pointer;
     border-radius: 5px;
