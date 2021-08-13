@@ -57,7 +57,6 @@ const App = () => {
         </div>
       </BoxButton>
       {escolherTela()}
-         <button onClick={limparMatches}>Limpar matches</button>
     </div>
   )
 }

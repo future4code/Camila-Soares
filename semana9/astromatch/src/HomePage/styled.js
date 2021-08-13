@@ -103,6 +103,19 @@ export const ContainerBranco = () => {
         ChoosePerson(false)
     }
 
+const clearMatches = () => {
+    const urlMatches = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/camila-soares-lovelace/clear"
+    const body = {
+        id: profile.id
+    }
+    axios.put(urlMatches,body)
+    .then((res)=>{
+        escolherPerfil()
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
     return (
         <div>
 
@@ -114,6 +127,8 @@ export const ContainerBranco = () => {
                     <img src={profile.photo} />
                     <button onClick={like}>X</button>
                     <button onClick={noLike}>♥</button>
+                    <button onClick={clearMatches}>Limpar matches</button>
+
                 </div>
             </ContainerPai>
 
