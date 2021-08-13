@@ -1,11 +1,13 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
+import { useEffect } from 'react/cjs/react.development'
 import styled from 'styled-components'
 
 const ContainerLista = styled.div`
-display: flex; 
-align-items: center;
-justify-content: flex-start;
-flex-direction: column;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
 
 
  div {
@@ -24,15 +26,31 @@ h1{
 }
 `
 
- const ContainerWhite = () => {
-    return(
+const ContainerWhite = (props) => {
+
+    const [matches, setMatches] = useState({})
+
+    const showMatchList = () => {
+        const urlList = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/camila-soares-lovelace/matches"
+        axios.get(urlList)
+            .then((res) => {
+                setMatches(res.data.matches)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        showMatchList()
+    }, [])
+    return (
         <ContainerLista>
             <div>
-            <h1>Astromatch</h1> 
+                <h1>Astromatch</h1>
             Lista de matches!
-            </div> 
-         
-            </ContainerLista>
+            </div>
+        </ContainerLista>
     )
 }
 

@@ -7,8 +7,8 @@ const BoxButton = styled.div`
 
 div{
   display: flex;
-flex-direction: row;
-justify-content: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 button{
@@ -18,47 +18,46 @@ button{
   margin: 4px;
   cursor: pointer;
 
-  :hover{
+:hover{
     background-color: #EE7EB9;
   }
 }
 
 `
-
 const App = () => {
-  const [page,setPage] = useState("Início")
+  const [page, setPage] = useState("Início")
 
-const escolherTela = () => {
-  switch (page) {
-    case "Início":
-    return <HomePage />
-    case "Lista":
-      return <MatchesPage />
+  const escolherTela = () => {
+    switch (page) {
+      case "Início":
+        return <HomePage />
+      case "Lista":
+        return <MatchesPage />
+    }
   }
-}
 
-const irParaHome = () => {
-  setPage("Início")
-}
+  const irParaHome = () => {
+    setPage("Início")
+  }
 
-const irParaMatches = () => {
-  setPage("Lista")
-}
+  const irParaMatches = () => {
+    setPage("Lista")
+  }
 
-const limparMatches = () => {
-  console.log("O botão vai limpar os matches")
-}
+  const limparMatches = () => {
+    console.log("O botão vai limpar os matches")
+  }
 
-  return(
+  return (
     <div>
-     <BoxButton>
-       <div>
-     <button onClick={irParaHome}>Início</button>
-     <button onClick={irParaMatches}>Lista</button>
-     </div>
-     <button onClick={limparMatches}>Limpar matches</button>
-     </BoxButton>
+      <BoxButton>
+        <div>
+          <button onClick={irParaHome}>Início</button>
+          <button onClick={irParaMatches}>Lista</button>
+        </div>
+      </BoxButton>
       {escolherTela()}
+         <button onClick={limparMatches}>Limpar matches</button>
     </div>
   )
 }
