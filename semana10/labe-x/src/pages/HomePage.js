@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
+
 
 document.body.style = "background: #FFE4ED"
+
+
+
 const BoxText = styled.div `
 
 display: flex;
@@ -39,13 +44,27 @@ button{
 }
 `
 
+
+
 const HomePage = () => {
+    
+const history = useHistory()
+
+// const params = useParams()
+
+const goToListTripsPage = () => {
+    history.push("/trips/list")
+}
+
+const goToAdminHomePage = () => {
+    history.push("/login")
+}
     return(
         <div>
             <BoxText>
 <div> <h1>LabeX</h1>
-<button>Ver viagens</button>
-        <button>Área de Admin</button>
+<button onClick={goToListTripsPage}>Ver viagens</button>
+        <button onClick={goToAdminHomePage}>Área de Admin</button>
 </div>
             </BoxText>
        
