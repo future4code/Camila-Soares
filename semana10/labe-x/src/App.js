@@ -27,11 +27,11 @@ const App = () => {
           <AdminHomePage />
         </Route>
 
-      <Route exact path={"/painelAdm"}>
+      <Route exact path={"/admin/trips/list"}>
       <LoginPage />
       </Route>
 
-      <Route exact path={"/detailsPage"}>
+      <Route exact path={"/admin/trips/create"}>
         <TripDetailsPage />
       </Route>
       </Switch>

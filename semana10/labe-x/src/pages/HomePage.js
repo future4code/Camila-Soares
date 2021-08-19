@@ -72,4 +72,4 @@ const goToAdminHomePage = () => {
     )
 }
 
-export default HomePage
+ export default HomePage

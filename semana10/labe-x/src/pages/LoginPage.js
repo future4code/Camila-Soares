@@ -4,15 +4,14 @@ const LoginPage = () => {
 
     const history = useHistory()
 
-
     const goToDetails = () => {
-        history.push("/detailsPage")
+        history.push("/admin/trips/create")
     }
     return(
         <div><h2>painel administrativo</h2>
         <button>Voltar</button>
-   <button onClick={goToDetails}>Criar viagem</button>
-   <button>Logout</button>
+         <button onClick={goToDetails}>Criar viagem</button>
+         <button>Logout</button>
         </div>
     )
 }

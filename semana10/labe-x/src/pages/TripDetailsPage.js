@@ -5,7 +5,7 @@ const TripDetailsPage = () => {
 
 
     return(
-        <p>TRIP DETAILS PAGE HEHHOSO aqui a pessoa cria a viagem</p>
+        <p>TRIP DETAILS PAGE ,nessa página a pessoa vai criar as viagens</p>
     )
 }
 

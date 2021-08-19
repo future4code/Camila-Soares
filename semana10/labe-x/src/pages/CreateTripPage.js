@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateTripPage = () => {
     return(
-        <h6>JAAJJAAJ</h6>
+        <h6>Create Trip</h6>
     )
 }
 
