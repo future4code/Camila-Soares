@@ -22,18 +22,18 @@ const App = () => {
         <Route exact path={"/"}>
           <HomePage />
         </Route>
-   
+
         <Route exact path={"/login"}>
           <AdminHomePage />
         </Route>
 
-      <Route exact path={"/admin/trips/list"}>
-      <LoginPage />
-      </Route>
+        <Route exact path={"/admin/trips/list"}>
+          <LoginPage />
+        </Route>
 
-      <Route exact path={"/admin/trips/create"}>
-        <TripDetailsPage />
-      </Route>
+        <Route exact path={"/admin/trips/create"}>
+          <TripDetailsPage />
+        </Route>
       </Switch>
     </BrowserRouter>
   )

@@ -1,6 +1,58 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import styled from 'styled-components'
+
+
+const ContainerTitle = styled.div`
+
+h2{
+    font-size: 50px;
+    color: #E85887;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+`
+
+const ContainerInput = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+input{
+    margin: 5px;
+    width: 500px;
+    height: 25px;
+    border-radius: 3px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+} 
+`
+const ContainerButton = styled.div`
+
+div{
+display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+button{
+    padding: 3px;
+    margin: 12px;
+    background-color: #E85887;
+    width: 120px;
+    height: 35px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid #C72057;
+
+:hover{
+    background-color: #F796B6;
+}
+}`
 
 const AdminHomePage = () => {
     const [email, setEmail] = useState("")
@@ -8,7 +60,11 @@ const AdminHomePage = () => {
 
     const history = useHistory()
 
-   console.log("email e senha:", email,password)
+    const goToHomePage = () => {
+        history.push("/")
+
+    }
+
 
     const onChangeEmail = (event) => {
         setEmail(event.target.value)
@@ -19,8 +75,8 @@ const AdminHomePage = () => {
 
     }
 
-    const onSubmitLogin = () => {
-
+    const onSubmitLogin = (event) => {
+        event.preventDefault()
 
         const body = {
             email: email,
@@ -30,7 +86,7 @@ const AdminHomePage = () => {
             .then((res) => {
                 console.log("deu certo", res.data)
 
-                history.push("/admin/trips/create")
+                history.push("/admin/trips/list")
 
 
             })
@@ -41,39 +97,37 @@ const AdminHomePage = () => {
     }
 
 
-    // const goToAdminPage = () => {
-    //        history.push("/admin/trips/create")
 
-    // }
-
-    // const goToAdmPage = () => {
-    //     history.push("/admin/trips/list")
-    // }
 
     return (
-        <div>
-            <h1>Login</h1>
-            <form>
-                <input
-                    placeholder={"Email"}
-                    type={"email"}
-                    required
-                    value={email}
-                    onChange={onChangeEmail}
-                />
+        <ContainerTitle>
+            <h2>Login</h2>
+            <form onSubmit={onSubmitLogin}>
+                <ContainerInput>
+                    <input
+                        placeholder={"Email"}
+                        type={"email"}
+                        required
+                        value={email}
+                        onChange={onChangeEmail}
+                    />
 
-                <input
-                    placeholder={"Senha"}
-                    type={"password"}
-                    required
-                    value={password}
-                    onChange={onChangePassword}
-                />
-                {/* <button onClick={goToHomePage}>Voltar</button> */}
-                <button onClick={onSubmitLogin}>Entrar</button>
-
+                    <input
+                        placeholder={"Senha"}
+                        type={"password"}
+                        required
+                        value={password}
+                        onChange={onChangePassword}
+                    />
+                </ContainerInput>
+                <ContainerButton>
+                    <div>
+                        <button onClick={goToHomePage}>Voltar</button>
+                        <button>Entrar</button>
+                    </div>
+                </ContainerButton>
             </form>
-        </div>
+        </ContainerTitle>
     )
 }
 

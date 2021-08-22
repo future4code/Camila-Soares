@@ -11,12 +11,14 @@ align-items: center;
 
 div{
     background-color: #FFE4ED;
-    width: 250px;
+    width: 350px;
     height: 300px;
-    padding: 60px;
+    /* padding: 60px; */
+
 } 
 
  h1{
+     text-align: center;
     color: #E85887;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
@@ -25,11 +27,12 @@ button{
     padding: 3px;
     margin: 2px;
     background-color: #E85887;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
     border-radius: 12px;
     cursor: pointer;
     border: 1px solid #C72057;
+    margin-left: 30px;
 
 :hover{
     background-color: #F796B6;
@@ -44,13 +47,26 @@ flex-direction: row;
 justify-content: center;
 
 
-
 div{
     background-color: white;
-    width: 400px;
-    height: 150px;
-    box-shadow: 1px 2px 2px 2px #EBEFED;
+    width: 600px;
+    height: 230px;
+    box-shadow: 1px 2px 2px 1px #FDA6C3;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: justify;
 }
+
+b{
+    color: #E85887;
+}
+}
+
 `
 
 const ListTripsPage = () => {
@@ -60,12 +76,12 @@ const ListTripsPage = () => {
 
     const showAllTrips = () => {
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trips"
-     
+
         axios.get(url)
             .then((res) => {
 
-                console.log("viagens:",res.data.trips)
-                 setTrips(res.data.trips)
+                // console.log("viagens:",res.data.trips)
+                setTrips(res.data.trips)
             })
             .catch((err) => {
                 console.log(err)
@@ -86,19 +102,19 @@ const ListTripsPage = () => {
         history.goBack("/")
     }
 
-    const allTrips = trips.map ((trip) => {
-        return(
+    const allTrips = trips.map((trip) => {
+        return (
             <ContainerInfoTrip>
                 <div>
-                <p><b>Nome:</b>{trip.name}</p>
-                <p><b>Descrição:</b>{trip.description}</p>
-                <p><b>Planeta:</b>{trip.planet}</p>
-                <p><b>Duração:</b>{trip.durationInDays}</p>
-                <p><b>Descrição:</b>{trip.date}</p>
+                    <p><b>Nome: </b>{trip.name}</p>
+                    <p><b>Descrição: </b>{trip.description}</p>
+                    <p><b>Planeta: </b>{trip.planet}</p>
+                    <p><b>Duração: </b>{trip.durationInDays}</p>
+                    <p><b>Descrição: </b>{trip.date}</p>
                 </div>
             </ContainerInfoTrip>
         )
-      })
+    })
 
     return (
         <div>
@@ -117,6 +133,6 @@ const ListTripsPage = () => {
             </ContainerInfoTrip> */}
         </div>
     )
-    }
+}
 
 export default ListTripsPage

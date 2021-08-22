@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 
-
 document.body.style = "background: #FFE4ED"
 
 
 
-const BoxText = styled.div `
+const BoxText = styled.div`
 
 display: flex;
 align-items: center;
@@ -20,7 +19,15 @@ div{
     background-color: #FFE4ED;
     width: 300px; 
 
+
+    img{
+    width: 300px;
+    height: 60px;
+    margin-top: 200px;
+}
+
  h1{
+    font-size: 50px;
     color: #E85887;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -30,8 +37,8 @@ button{
     padding: 3px;
     margin: 2px;
     background-color: #E85887;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
     border-radius: 12px;
     cursor: pointer;
     border: 1px solid #C72057;
@@ -41,35 +48,36 @@ button{
 }
 
 
+
+
 }
 `
 
-
-
 const HomePage = () => {
-    
-const history = useHistory()
 
-// const params = useParams()
+    const history = useHistory()
 
-const goToListTripsPage = () => {
-    history.push("/trips/list")
-}
+    const goToListTripsPage = () => {
+        history.push("/trips/list")
+    }
 
-const goToAdminHomePage = () => {
-    history.push("/login")
-}
-    return(
+    const goToAdminHomePage = () => {
+        history.push("/login")
+    }
+    return (
+
         <div>
+
             <BoxText>
-<div> <h1>LabeX</h1>
-<button onClick={goToListTripsPage}>Ver viagens</button>
-        <button onClick={goToAdminHomePage}>Área de Admin</button>
-</div>
+                <div>
+                    <h1>LabeX</h1>
+                    <button onClick={goToListTripsPage}>Ver viagens</button>
+                    <button onClick={goToAdminHomePage}>Área de Admin</button>
+                </div>
             </BoxText>
-       
         </div>
+
     )
 }
 
- export default HomePage
+export default HomePage
