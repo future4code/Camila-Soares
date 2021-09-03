@@ -32,7 +32,9 @@ const Router = () => {
         <Route exact path={"/signUp"}>
             <SignUp/>
         </Route>
-
+        <Route exact path={"/home"}>
+            <Home />
+        </Route>
         
         <Route>
             <Error/>

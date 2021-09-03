@@ -17,3 +17,10 @@ export const goToCreatePost = (history) => {
 export const goToPostPage = (history) => {
     history.push("/post")
 }
+export const goToHomePage = (history) => {
+    history.goBack("/")
+}
+
+export const goToHome = (history) => {
+    history.goBack("/home")
+}

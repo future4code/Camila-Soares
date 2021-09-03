@@ -6,13 +6,13 @@ import { ContainerButton } from '../login/styled'
 import { ContainerInput } from '../login/styled'
 import { Button } from '@material-ui/core'
 import IntegracaoSignUp from "./SignUpForm"
-
+import { ContainerOrange } from '../login/styled'
 
 const SignUpPage = () => {
     return(
-        <div>
+        <ContainerOrange>
          <IntegracaoSignUp />
-        </div>
+        </ContainerOrange>
     )
 }
 

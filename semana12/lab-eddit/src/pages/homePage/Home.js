@@ -1,29 +1,35 @@
-import { Button } from '@material-ui/core'
 import React from 'react'
+import { ContainerLogoHeader } from './styled'
+import { ContainerImgReddit } from './styled'
+import { ContainerButton } from './styled'
+import { Header } from './styled'
+import reddit from '../../img/reddit.png'
+import logo from '../../img/logo.png'
+import { goToLoginPage } from '../../routes/Cordinators'
+import { goToSignUpPage } from '../../routes/Cordinators'
 import { useHistory } from 'react-router-dom'
-import{ goToLoginPage } from '../../routes/Cordinators'
-import { ContainerTitle } from '../login/styled'
-import { ContainerButton } from '../login/styled'
 
-const Home = () => {
+const Post = () => {
 
     const history = useHistory()
-
-    return(
+    
+    return (
         <div>
-            <ContainerTitle>
-            <h1>LabEddit</h1>
-            </ContainerTitle>
+            <Header>
+                <ContainerLogoHeader>
+                    <img src={logo} />
+                </ContainerLogoHeader>
+            </Header>
+            <ContainerImgReddit>
+                <img src={reddit} />
+            </ContainerImgReddit>
             <ContainerButton>
-            <Button variant="contained" color={"primary"} onClick={() => goToLoginPage(history)} >
-                Login
-            </Button>
+                <button onClick={() => goToLoginPage(history)}>Entrar</button>
+                <button onClick={() => goToSignUpPage(history)}>Cadastrar</button>
             </ContainerButton>
-           
+
         </div>
     )
 }
 
-export default Home
-
-//            <button onClick={() => goToLoginPage(history)}>Login</button>
+export default Post

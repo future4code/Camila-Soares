@@ -1,34 +1,115 @@
 import styled from 'styled-components'
 
-export const ContainerTitle = styled.div`
+export const ContainerOrange = styled.div`
+background-image: linear-gradient(#ff9d2f, #ff6126);
+height: 100vh; `
+
+export const ContainerWhite = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
 
 h1{
-    color: orange;
+    text-align: center;
+    color: #FF6226;
+    font-size: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-`
+
+div{
+    width: 700px;
+    height: 460px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 85px;
+} `
+
+ export const ContainerTitle = styled.div`
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+h1{
+    color: orange;
+} ` 
+
 export const ContainerInput = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+width: 600px;
+margin-top: -260px;
+margin-left: 455px;
+
+input{ 
+    width: 320px;
+    height: 40px;
+    outline: none;
+    background-color: #EDF5F1;
+    border: none;  
+
+    :hover {
+      background-color: #E5ECE9;
+      border: none;
+}  
+} `
+
+export const ContainerInputEmail = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 25px;
+
+input{
+   
+    margin: 30px;
+    width: 320px;
+    height: 40px;
+    outline: none;
+    background-color: #EDF5F1;
+    border: none;    
+    
+:hover {
+      background-color: #E5ECE9;
+      border: none;
+}
+}
 `
+
 export const ContainerButton = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 10px;
+margin-top: 15px;
+margin-left: 180px;
+
 button{
     width: 200px;
     height: 40px;
-    background-color: #ff7f50;
+    background-color: #FF6226;
     margin: 5px;
 
+:hover{
+    background-color: #F89834;
+}
+}
+`
 
+export const ContainerButtonExterno = styled.div`
+/* margin-bottom: 230px; */
+margin-left: 300px;
+
+button{
+    width: 200px;
+    height: 40px;
+    background-color: #FF6226;
+    margin: 5px;
+    margin-top: -67px;
+    margin-left: 240px;
 
 :hover{
-    background-color: #F1632F;
+    background-color: #F89834;
 }
 }
 `

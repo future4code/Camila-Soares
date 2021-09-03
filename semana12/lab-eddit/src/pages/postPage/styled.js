@@ -1,73 +1,62 @@
-import React from 'react'
 import styled from 'styled-components'
 
-export const Header = styled.div`
- position: relative;
-  height: 400px;
-  background-image: linear-gradient(#ff9d2f, #ff6126);
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
-
-  /* h1{
-      color: white;
-      font-size: 80px;
-  } */
+export const ContainerCinza = styled.div`
+background-color: #D8DDDA;
+height: 145vw;
 `
 
-// export const ContainerTitleHeader = styled.div`
-// display: flex;
-// align-items: center;
-// justify-content: center;
+export const HeaderWhite = styled.div `
+background-color: white;
+height: 60px;
 
-// h1{
-//     margin-bottom: 140px;
-// }
+img{
+    width: 150px;
+    height: 50px;
+    margin-top: 5px;
+}
+`
 
-// `
+export const ContainerUser = styled.div`
+width: 150px;
+height: 30px;
+background-color: pink;
+`
 
-export const ContainerImgReddit = styled.div`
+
+export const CardPosts = styled.div`
 display:flex;
-flex-direction: row;
-align-items: flex-end;
-margin-top: 18px;
-
-img{
-    height: 160px;
-    margin: 2px;
-}
-`
-export const ContainerLogoHeader = styled.div`
-display: flex;
 align-items: center;
 justify-content: center;
+/* margin: 10px; */
 
-img{
-    height: 400px;
+div{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
 }
 
 `
 
-export const ContainerButton = styled.div`
+export const ContainerButtonHeader = styled.div`
 display: flex;
-align-items: center;
-justify-content: center;
+justify-content: space-around;
 
 button{
-    width: 200px;
-    height: 40px;
-    background-color: #FF6226;
-    margin: 5px;
-    margin-top: 2px;
-    border-radius: 10px;
-    border: none;
+    width: 100px;
+    height: 30px;
+    border: 2px solid #FF6226;
+    border-radius: 8px;
+    background-color: white;
     cursor: pointer;
-    color: white;
-
+    margin-left: 820px;
+    margin-top: -45px;
 :hover{
-    background-color: #F89834;
+        background-color: #FF6226;
+    }
+
 }
-}
+
 `
-
-
-
