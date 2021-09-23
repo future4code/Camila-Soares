@@ -7,6 +7,11 @@ import cors from 'cors'
 //a) O endpoint que eu usaria para buscar todos os usuários da lista seria GET.
 //b) A entidade que está sendo manipulada seria indicada por app.get("/users/")
 
+//Exercício 2
+//a) O parâmetro de type da requisição utilizado no postman foi “/users?id=2” (Escolhi um número que ia até o 6 para verificar)
+//b) Para garantir que apenas types válidos sejam utilizados,foi feita uma condicional if na aula da Amandinha,onde nessa condicional, se não existir um type válido,retorna uma frase de erro no throw.
+
+//Exercício 3
 
 
 
@@ -17,7 +22,8 @@ import cors from 'cors'
 
 
 
-type User = {
+
+type user = {
   id: number,
   name: string,
   email: string,
@@ -26,7 +32,7 @@ type User = {
 }
 
 // Mock simulando um array de usuários no Banco de Dados
-let users: User[] = [
+let users: user[] = [
   {
       id: 1,
       name: "Alice",
@@ -79,20 +85,22 @@ app.use(express.json())
 app.use(cors())
 
 
-// app.get('/users',(req: Request, res: Response) => {
-//   let codeError: number = 400
-//     try {
-//       const name: string = req.query.name as string
-//       const user: user | undefined = users.find((user) => user.name === name)
-//       if (!user) {
-//         codeError = 404
-//         throw new Error('User not found')
-//       }
-//       res.status(200).send(user)
-//     }  catch(error) {
-//       res.status(codeError).send({message: error.message})
-//     }
-// })
+app.get('/users',(req: Request, res: Response) => {
+  let codeError: number = 400
+    try {
+      const name: string = req.query.name as string
+      const user: user | undefined = users.find((user) => user.name === name)
+      if (!user) {
+        codeError = 404
+        throw new Error('User not found')
+      }
+      res.status(200).send(user)
+    }  catch(error) {
+      res.status(codeError).send({message: error.message})
+    }
+})
+
+
 
 app.get('/users/:id',(req: Request, res: Response) => {
    let errorCode = 400
