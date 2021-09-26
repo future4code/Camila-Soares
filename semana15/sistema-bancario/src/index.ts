@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from 'express'
 import { AddressInfo } from 'net'
+import { contas } from './contas'
 import cors from 'cors'
 
 const app: Express = express()
@@ -9,91 +10,50 @@ app.use(cors())
 
 // Criar conta
 
-type Client = {
-    name: string,
-    data: number,
-    cpf: number,
-    saldo: number
-}
+app.post("/users/create", (req: Request,res: Response) => {
+    try{
 
-// type Saldo = {
-//     valor: number,
-//     data: number,
-//     descricao: string
-// }
+    const { nome, cpf, dataDeNascimentoAsString } = req.body
 
-let clients: Client[] = [
-    {
-    name: 'Aya',
-    cpf: 12312456798,
-    data: 11/12/1990,
-    saldo: 1
-    },
+    const [dia, mes , ano] = dataDeNascimentoAsString.split("/")
+    const dataDeNascimento: Date = new Date(`${ano}-${mes}-${dia}`)
+    
+    contas.push({
+        nome,
+        cpf,
+        dataDeNascimento,
+        saldo: 0,
+        statement: []
+    })
+    res.status(201).send("Conta criada com sucesso!")
 
-    {
-    name: 'Joao',
-    cpf: 12456709823,
-    data: 23/1/1980,
-    saldo: 2
-    },
-
-    {
-    name: 'Fernando',
-    cpf: 45612465365,
-    data: 4/5/1995,
-    saldo: 2
-    },
-
-    {
-    name: 'Camila',
-    cpf: 14556487690,
-    data: 19/5/2000,
-    saldo: 3
-    },
-
-    {
-    name: 'André',
-    cpf: 43578623465,
-    data: 13/4/1992,
-    saldo: 4
+    } 
+    catch(error) {
+        console.log(error)
+    res.status(400).send(error.message)
     }
+})
 
-]
-console.log(clients)
+// Vizualizar usuários
 
-// let saldo: Saldo[] = [
-//     valor: 20,
-//     data: 1,
-//     descricao: ""
-// ]
-
-app.get('/clients',(req: Request,res: Response) => {
- let nome = req.query.nome as string
- let data = req.query.data as number | undefined
- let cpf = req.query.cpf as number | undefined
-
- if(!nome && !data && !cpf) {
-   return res.status(404)
- }
- throw new Error("Dados inválidos")
-
+app.get("users/all",( req: Request,res: Response ) => {
+    try{
+        if(!contas.length) {
+            res.statusCode = 404
+            throw new Error("Não foi encontrada nenhuma conta")
+        }
+    res.status(200).send(contas)
+    } 
+    catch(error){
+    res.send(error.message)
+    }
 })
 
 
-//pode criar conta se idade === ou > 18
-//informar: nome,cpf e data nascimento
 
 
 
-console.log("Hello,world")
 
-
-
-const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
-       const address = server.address() as AddressInfo;
-       console.log(`Server is running in http://localhost: ${address.port}`);
-    } else {
-       console.error(`Failure upon starting server.`);
-    }
-});
+app.listen(3003, () => {
+    console.log("Servidor rodando na porta 3003")
+})
