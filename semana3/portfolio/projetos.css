@@ -30,6 +30,7 @@ footer{
     background-color: #f6466c;
     width: 100%;
     height: 90px;
+    margin-top: -90px;
 }
 
 /* MENU */
@@ -43,7 +44,6 @@ footer{
     margin-top: 35px;
     color: yellow;
     border-bottom: tomato;
-    color: yellow
     /* display: inline; */
     
 }
@@ -69,7 +69,6 @@ footer{
     margin-top: -19px;
 }
 
-/*LETRAS */
 
 /* IMAGENS */
 img{
@@ -78,21 +77,19 @@ img{
 }
 
 .posicionamento-icone1{
- margin-top: -116px;
- margin-top: -80px;
- margin-left: 80px;
+ margin-top: -97px;
+ margin-left: 100px;
 }
 
 .posicionamento-icone2{
-    margin-top: -25px;
-    margin-left: 730px;
+    margin-top: 35px;
+    margin-left: -240px;
    }
 
    
 .posicionamento-icone3{
-    margin-top: -78px;
-    margin-left: 162px;
-    margin-left: 175px;
+    margin-top: -98px;
+    margin-left: 220px;
    }
 
 .frase-topo{
@@ -111,7 +108,7 @@ h1 {
 
 /* LINKS */ 
 
-	
+ 	
  /* link que ainda não foi acessado */
  a {
     color: #000;
@@ -132,23 +129,6 @@ h1 {
      color: black;
      text-decoration: none;
  }
-
-    
-
-    height: 90px;    
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: -40px;
-    padding-left: 140px;
-}
-
-/* FONTE BONITA */
-
-
-
-a:visited {
-    color: #fb758e;
-};
-
 /*BOTÃO */
 
 .botao-voltar{
@@ -159,12 +139,11 @@ a:visited {
     color: black;
     margin-top: -50px;
     margin-left: -690px;
-    font-family:sans-serif;
-    
+    font-family:sans-serif
 }
 
 .p4{
-    font-family:sans-serif
+    font-family:sans-serif;
 
 }
 /* FONTE BONITA */ 
@@ -254,35 +233,91 @@ legend
     margin-top: -580px;
     margin-left: 320px;
     width: 900px;
-    height: 520px;
+    height: 1020px;
     float: left;
   }
 
   h2{
       font-size: 70px;
       font-family: Champagne;
-      margin-left: 150px;
+      margin-left: 130px;
       color: #363636;
-      margin-top: 60px;
   }
   @font-face {
 	font-family: Champagne;
 	src: url('Champagne\ &\ Limousines.ttf')
 }
 
-.texto-inicio{
+
+.posicionamento-projeto{
+    margin-left: -490px;
+}
+
+.p5{
+    font-family: Champagne;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.meio2{
+    background-color: #eaece8;
+    width: 100%;
+    height: 600px;
+}
+
+.meio3{
+    background-color: #eaece8;
+    width: 100%;
+    height: 300px;
+}
+.posicionamento-projeto{
+    margin-top: -20px;
+}
+
+.posicionamento-js-html-css{
+    margin-top: 50px;
+    margin-left: -200px;
+}
+
+.texto-projeto{
+    font-family:sans-serif;
     width: 880px;
     margin-left: 20px;
     margin-top: 20px;
-    font-size: 20px;
+
 }
 
 a{
     font-family: Champagne;
 }
 
-.posicionamento-foto{
- margin-top: -30px;
- margin-left: 40px;
+.infos{
+    
+    font-family: Champagne;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 20px;
+
+
+}
+
+.caixadiv3{
+    background-color: white;
+    box-sizing: border-box;
+    margin-top: -580px;
+    margin-left: 320px;
+    width: 900px;
+    height: 700px;
+    float: left;
+  
+
+}
+
+h4{
+    font-size: 40px;
+    font-family: Champagne;
+    color: #363636;
+    margin-left: 230px;
+    margin-top: 30px;
 
 }
