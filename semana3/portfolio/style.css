@@ -43,6 +43,7 @@ footer{
     margin-top: 35px;
     color: yellow;
     border-bottom: tomato;
+    color: yellow
     /* display: inline; */
     
 }
@@ -68,6 +69,7 @@ footer{
     margin-top: -19px;
 }
 
+/*LETRAS */
 
 /* IMAGENS */
 img{
@@ -77,6 +79,7 @@ img{
 
 .posicionamento-icone1{
  margin-top: -116px;
+ margin-top: -80px;
  margin-left: 80px;
 }
 
@@ -89,6 +92,7 @@ img{
 .posicionamento-icone3{
     margin-top: -78px;
     margin-left: 162px;
+    margin-left: 175px;
    }
 
 .frase-topo{
@@ -130,6 +134,21 @@ h1 {
  }
 
     
+
+    height: 90px;    
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: -40px;
+    padding-left: 140px;
+}
+
+/* FONTE BONITA */
+
+
+
+a:visited {
+    color: #fb758e;
+};
+
 /*BOTÃO */
 
 .botao-voltar{
@@ -265,4 +284,5 @@ a{
 .posicionamento-foto{
  margin-top: -30px;
  margin-left: 40px;
+
 }
