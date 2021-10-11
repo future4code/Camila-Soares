@@ -1,0 +1,2 @@
+1-colocar api rest no nome linkedin
+2- incluir manipulação dom
