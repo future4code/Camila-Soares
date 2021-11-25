@@ -59,3 +59,6 @@ class Stack {
 
    }
 }
+
+
+### Exercicio 3
