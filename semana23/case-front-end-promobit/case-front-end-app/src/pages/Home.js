@@ -8,15 +8,17 @@ import { BiSearchAlt2 } from 'react-icons/bi'
 import { GridMovies } from '../styles/styled'
 import { PositionIconCamera } from '../styles/styled'
 import { ContainerInput } from '../styles/styled'
-import { ButtonSearch } from '../styles/styled'
 
 document.body.style = "background-color: #202329"
 
 const Home = () => {
 
     const [searchMovie, setSearchMovie] = useState('')
+    const [itens, setItens] = useState([])
+    const [itensPerPage,setItensPerPage] = useState(2)
+    const [currentPage, setCurrentPage] = useState(0)
 
-    // const URL_IMG = "https://image.tmdb.org/t/p/w500/"
+    const pages = Math.ceil(itens.length / itensPerPage)
 
     const [movie, setMovie] = useState([])
 
@@ -50,14 +52,14 @@ const Home = () => {
         return (<div key={key}>
          
             <img src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} /> 
-            <p>{film.original_title}</p>
+             <p>{film.original_title}</p> 
         
-            {/* <p><b>{film.vote_average} </b>
+             <p><b>{film.vote_average} </b>
             <AiFillStar
             color={'yellow'}
             size={12}
             /> 
-            </p>  */}   
+            </p>   
             {/* <button>Details</button>      */}
            
         </div>)
@@ -65,16 +67,21 @@ const Home = () => {
 
     return (
         <div>
+          <div>
+              {Array.from(Array(pages), (item,index) => {
+                  return <button>{index}</button>
+              })}
+          </div>
             <Header>
               
                 <h1>Movies world</h1>
 
-              <PositionIconCamera>
+              {/* <PositionIconCamera> 
               <BiCameraMovie
                     color={'white'}
                     size={50}
                 /> 
-              </PositionIconCamera>
+              </PositionIconCamera>  */}
 
              
             </Header>
@@ -88,8 +95,8 @@ const Home = () => {
                     
                 </ContainerInput>
 
-              
-  <GridMovies>
+       
+                <GridMovies>
 
              
                 <ContainerMovies>
@@ -102,17 +109,7 @@ const Home = () => {
            
                
               
-            </GridMovies>  
-
-            {/* <ButtonSearch>
-                <button>
-                    <BiSearchAlt2
-                        color={'red'}
-                        size={20}
-                    />
-                </button>
-                </ButtonSearch> */}
-
+            </GridMovies>   
 
         </div>
     )
