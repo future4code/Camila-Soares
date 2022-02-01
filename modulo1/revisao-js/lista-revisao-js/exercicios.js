@@ -4,9 +4,11 @@
 
 
 // EXERCÍCIO 01
-function retornaTamanhoArray(array) {
-   
+function retornaTamanhoArray(array) {   
+   return array.length
 }
+
+retornaTamanhoArray()
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
